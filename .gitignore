@@ -1,0 +1,23 @@
+# 忽略原始测序数据和中间结果
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.zip
+*.html
+*.jf
+*.histo
+*.json
+
+# 忽略整个 QC 输出目录
+read_QC/
+Kas-1/
+RNAseq_Sha/
+
+# 忽略 SLURM 作业日志文件
+*.o
+*.e
+
+# 杂项
+.DS_Store
+.vscode/
