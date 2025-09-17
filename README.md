@@ -40,3 +40,17 @@ This repository documents a reproducible workflow for my course work on accessio
 ## Notes
 - Scripts are executed via `sbatch` on the cluster.  
 - Only code and summaries are versioned here; large FASTQ/HTML/ZIP files stay on the cluster.
+
+
+### K-mer analysis (Jellyfish + GenomeScope)
+
+We performed k-mer counting with **Jellyfish (k=21)** and uploaded the histogram to GenomeScope2.0.  
+Results are summarized in the PDF report (`read_QC/kmer_counting/GenomeScope.pdf`).
+
+**Findings:**
+- **Estimated genome size**: ~135 Mb, which matches the expected size of *Arabidopsis thaliana*.  
+- **Heterozygosity rate**: very low, as expected for a highly inbred/selfing plant.  
+- **Coverage**: ~33×, consistent with the PacBio HiFi data (~4.48 Gb total bases).  
+- **Why canonical k-mers?** Because each DNA k-mer and its reverse complement are treated as the same unit, which reduces redundancy and avoids double-counting.
+
+This confirms that our data quality and sequencing depth are appropriate for downstream genome assembly and annotation.
