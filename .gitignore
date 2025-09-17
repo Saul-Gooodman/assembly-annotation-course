@@ -1,12 +1,16 @@
+ HEAD
 # 忽略大数据与中间结果
 read_QC/
 Kas-1/
 RNAseq_Sha/
+
+ 4285acec01b943ef492ef19bb2997fdf4a61e09e
 *.fastq
 *.fastq.gz
 *.fq
 *.fq.gz
 *.zip
+ HEAD
 *.o
 *.e
 
@@ -15,3 +19,23 @@ RNAseq_Sha/
 !results/**
 !figures/
 !figures/**
+*.html
+*.jf
+*.histo
+*.json
+
+
+read_QC/
+Kas-1/
+RNAseq_Sha/
+
+
+*.o
+*.e
+
+
+.DS_Store
+.vscode/
+Kas-1/
+RNAseq_Sha/
+ 4285acec01b943ef492ef19bb2997fdf4a61e09e
