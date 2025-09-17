@@ -1,5 +1,3 @@
-# assembly-annotation-course
-
 mkdir -p figures results
 cat > README.md << 'EOF'
 # Assembly & Annotation Course – Kas-1 (Arabidopsis thaliana)
