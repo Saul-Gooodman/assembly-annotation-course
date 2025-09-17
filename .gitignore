@@ -1,41 +1,27 @@
- HEAD
-# 忽略大数据与中间结果
-read_QC/
-Kas-1/
-RNAseq_Sha/
-
- 4285acec01b943ef492ef19bb2997fdf4a61e09e
+# Ignore raw sequencing data
 *.fastq
 *.fastq.gz
 *.fq
 *.fq.gz
-*.zip
- HEAD
-*.o
-*.e
 
-# 允许结果与图片被跟踪（不要忽略它们）
-!results/
-!results/**
-!figures/
-!figures/**
-*.html
+# Ignore Jellyfish binary output
 *.jf
-*.histo
-*.json
 
-
-read_QC/
-Kas-1/
-RNAseq_Sha/
-
-
+# Ignore SLURM log files
 *.o
 *.e
 
-
+# Ignore temporary/hidden files
 .DS_Store
-.vscode/
-Kas-1/
-RNAseq_Sha/
- 4285acec01b943ef492ef19bb2997fdf4a61e09e
+*.tmp
+*.swp
+
+# Ignore everything under read_QC by default
+read_QC/*
+
+# But keep QC results and kmer counting outputs
+!read_QC/fastqc/*.html
+!read_QC/fastp/*.html
+!read_QC/fastp/*.json
+!read_QC/kmer_counting/*.histo
+!read_QC/kmer_counting/*.pdf
